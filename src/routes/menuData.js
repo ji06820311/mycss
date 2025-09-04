@@ -19,6 +19,9 @@ export const menuData = [
             { path: '/components01', label: '클래스형 컴포넌트' },
             { path: '/components02', label: '함수형 컴포넌트' },
             { path: '/component_separate', label: '컴포넌트 분리하기' },
+            { path: '/file_separator', label: '파일 분리' },
+            { path: '/use_props', label: 'props 사용하기' },
+            { path: '/array_and_table_01', label: '테이블 만들기01' },
         ]
     },
     // 여기에 4장, 5장.... 내용을 계속 추가하면 됩니다.
