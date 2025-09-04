@@ -21,6 +21,7 @@ import AppComponentSeparate from './../components/ch03.react_component/component
 import AppFileSeparator from './../components/ch03.react_component/file_separator';
 import AppUseProps from './../components/ch03.react_component/use_props';
 import AppMakeTable01 from './../components/ch03.react_component/array_and_table_01';
+import AppMakeTable02 from './../components/ch03.react_component/array_and_table_02';
 
 function AppRoutes() {
     return (
@@ -40,6 +41,7 @@ function AppRoutes() {
             <Route path='/file_separator' element={<AppFileSeparator />} />
             <Route path='/use_props' element={<AppUseProps />} />
             <Route path='/array_and_table_01' element={<AppMakeTable01 />} />
+            <Route path='/array_and_table_02' element={<AppMakeTable02 />} />
         </Routes>
     );
 };

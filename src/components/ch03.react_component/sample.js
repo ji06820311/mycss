@@ -1,5 +1,5 @@
 function App(){
-    console.log('샘플')
+    console.log('샘플');
 
     return(
         <div className="App">
