@@ -28,6 +28,7 @@ import AppClickEvent from './../components/ch04.event_handing/click_event';
 import AppChangeEvent from './../components/ch04.event_handing/change_event';
 import AppMouseEvent from './../components/ch04.event_handing/mouse_event';
 import AppKeyEvent from './../components/ch04.event_handing/Key_event';
+import AppComboEvent from './../components/ch04.event_handing/combo_change';
 
 function AppRoutes() {
     return (
@@ -53,6 +54,7 @@ function AppRoutes() {
             <Route path='/change_event' element={<AppChangeEvent />} />
             <Route path='/mouse_event' element={<AppMouseEvent />} />
             <Route path='/Key_event' element={<AppKeyEvent />} />
+            <Route path='/combo_change' element={<AppComboEvent />} />
         </Routes>
     );
 };
