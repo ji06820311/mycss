@@ -23,6 +23,12 @@ import AppUseProps from './../components/ch03.react_component/use_props';
 import AppMakeTable01 from './../components/ch03.react_component/array_and_table_01';
 import AppMakeTable02 from './../components/ch03.react_component/array_and_table_02';
 
+//ch04장
+import AppClickEvent from './../components/ch04.event_handing/click_event';
+import AppChangeEvent from './../components/ch04.event_handing/change_event';
+import AppMouseEvent from './../components/ch04.event_handing/mouse_event';
+import AppKeyEvent from './../components/ch04.event_handing/Key_event';
+
 function AppRoutes() {
     return (
         <Routes>
@@ -42,6 +48,11 @@ function AppRoutes() {
             <Route path='/use_props' element={<AppUseProps />} />
             <Route path='/array_and_table_01' element={<AppMakeTable01 />} />
             <Route path='/array_and_table_02' element={<AppMakeTable02 />} />
+
+            <Route path='/click_event' element={<AppClickEvent />} />
+            <Route path='/change_event' element={<AppChangeEvent />} />
+            <Route path='/mouse_event' element={<AppMouseEvent />} />
+            <Route path='/Key_event' element={<AppKeyEvent />} />
         </Routes>
     );
 };
