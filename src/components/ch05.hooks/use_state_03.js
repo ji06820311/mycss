@@ -11,7 +11,7 @@ function App() {
         image: 'avante',
         comment: '나름 좋아요',
         modelName: '아반떼(avante)',
-    });
+    }); 
 
     const carMap = new Map([
         ['avante', '아반떼'],
