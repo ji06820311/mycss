@@ -11,7 +11,7 @@ function App({ mode, product }) {
             return null;
     }
 
-   
+
 }
 
 export default App;
