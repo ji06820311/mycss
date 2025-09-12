@@ -15,7 +15,7 @@ import { useState } from "react";
     가짜는 읽기 전용, 진짜 정보는 type="hidden"으로 처리합니다.
 */
 
-function App({ product, onSubmitUpdate }) {
+function App({ product, onSubmitUpdate, categorys }) {
 
     const comment = '수정'; // 코드에서 반복적인 단어는 변수로 만들어 JSX 문법으로 처리하세요.
 
@@ -44,50 +44,56 @@ function App({ product, onSubmitUpdate }) {
         });
     }
 
+    const categoryOptions = categorys.map((cate,index) =>
+    <option key={index} value={cate.english} selected={formData.category === cate.english}>
+            {cate.korean}
+        </option>
+   );
+
 
     return (
         <div >
             <h2>상품 {comment}</h2>
-            <form action="#" onSubmit={SumittedData}>
+            <form action="#" onSubmit={SumittedData} >
                 <InputGroup className="custom-input-group">
-                    <InputGroup.Text className="input-group-test">아이디</InputGroup.Text>
+                    <InputGroup.Text className="input-group-text">아이디</InputGroup.Text>
 
                     <input name="id" type="hidden" onChange={InputChange} value={formData.id} />
 
                     <Form.Control type="text" name="fakeid" onChange={InputChange} value={formData.id} disabled />
                 </InputGroup>
                 <InputGroup className="custom-input-group">
-                    <InputGroup.Text className="input-group-test">이름</InputGroup.Text>
+                    <InputGroup.Text className="input-group-text">이름</InputGroup.Text>
                     <Form.Control type="text" name="name" onChange={InputChange} value={formData.name} />
                 </InputGroup>
                 <InputGroup className="custom-input-group">
-                    <InputGroup.Text className="input-group-test">가격</InputGroup.Text>
+                    <InputGroup.Text className="input-group-text">가격</InputGroup.Text>
                     <Form.Control type="text" name="price" onChange={InputChange} value={formData.price} />
                 </InputGroup>
                 <InputGroup className="custom-input-group">
-                    <InputGroup.Text className="input-group-test">카테고리</InputGroup.Text>
+                    <InputGroup.Text className="input-group-text">카테고리</InputGroup.Text>
                     <Form.Select name="category" onChange={InputChange}>
                         <option value="-">-- 카테고리를 선택해 주세요.</option>
-                        <option value="bread" selected={product.category === 'bread'}>빵</option>
-                        <option value="beverage" selected={product.category === 'beverage'}>음료수</option>
+                        {categoryOptions}
                     </Form.Select>
                 </InputGroup>
                 <InputGroup className="custom-input-group">
-                    <InputGroup.Text className="input-group-test">재고</InputGroup.Text>
+                    <InputGroup.Text className="input-group-text">재고</InputGroup.Text>
                     <Form.Control type="text" name="stock" onChange={InputChange} value={formData.stock} />
                 </InputGroup>
                 <InputGroup className="custom-input-group">
-                    <InputGroup.Text className="input-group-test">이미지</InputGroup.Text>
+                    <InputGroup.Text className="input-group-text">이미지</InputGroup.Text>
                     <Form.Control type="text" name="image" onChange={InputChange} value={formData.image} />
                 </InputGroup>
                 <InputGroup className="custom-input-group">
-                    <InputGroup.Text className="input-group-test">세부 설명</InputGroup.Text>
+                    <InputGroup.Text className="input-group-text">세부 설명</InputGroup.Text>
                     <Form.Control as="textarea" name="description" onChange={InputChange} value={formData.description} />
                 </InputGroup>
                 <div className="d-grid gap-2">
-                    <Button type="submit">{comment}</Button>
+                    <Button variant="primary" type="submit">{comment}</Button>
                 </div>
             </form>
+
         </div>
     );
 }
