@@ -6,6 +6,21 @@ import { Routes, Route } from 'react-router-dom';
 // ch01 장
 // 기호 .는 현재 폴더, ..는 상위 폴더, /는 폴더 구분자
 // impor 앱이름 from '전체경로/파일명'
+
+// ch01 장
+import AppMakeArray01 from './../components/ch01.react_basic/make_array_01';
+import AppMathObject01 from './../components/ch01.react_basic/math_object_01';
+import AppIfExercise from './../components/ch01.react_basic/if_exercise';
+import AppSwitchExercise from './../components/ch01.react_basic/switch_exercise';
+import AppTypeOfNumber from './../components/ch01.react_basic/typeof_number';
+
+import AppFormExam from './../components/ch01.react_basic/form_exam';
+import AppListExam from './../components/ch01.react_basic/list_exam';
+import AppTableExam from './../components/ch01.react_basic/table_exam';
+
+
+
+// ch02
 import AppLetConst from './../components/ch02.es6_syntax/let_const';
 import AppTemplateString from './../components/ch02.es6_syntax/template_string';
 import AppSubjectList from './../components/ch02.es6_syntax/make_subject_list';
@@ -14,7 +29,7 @@ import AppArrowFunction from './../components/ch02.es6_syntax/arrow_function';
 import AppArrayMap from './../components/ch02.es6_syntax/array_map';
 import AppSpreadOperator from './../components/ch02.es6_syntax/spread_operator';
 
-//ch02장
+//ch03장
 import AppClassComponent from './../components/ch03.react_component/components01';
 import AppFunctionComponent from './../components/ch03.react_component/components02';
 import AppComponentSeparate from './../components/ch03.react_component/component_separate';
@@ -23,7 +38,7 @@ import AppUseProps from './../components/ch03.react_component/use_props';
 import AppMakeTable01 from './../components/ch03.react_component/array_and_table_01';
 import AppMakeTable02 from './../components/ch03.react_component/array_and_table_02';
 
-//ch03장
+//ch04장
 import AppClickEvent from './../components/ch04.event_handing/click_event';
 import AppChangeEvent from './../components/ch04.event_handing/change_event';
 import AppMouseEvent from './../components/ch04.event_handing/mouse_event';
@@ -31,7 +46,7 @@ import AppKeyEvent from './../components/ch04.event_handing/Key_event';
 import AppComboEvent from './../components/ch04.event_handing/combo_change';
 import AppSubmitEvent from './../components/ch04.event_handing/submit_event';
 
-//ch04장
+//ch05장
 import AppUseState01 from './../components/ch05.hooks/use_state_01';
 import AppUseState02 from './../components/ch05.hooks/use_state_02';
 import AppUseState03 from './../components/ch05.hooks/use_state_03';
@@ -40,7 +55,7 @@ import AppUseEffect01 from './../components/ch05.hooks/use_effect_01';
 import AppUseEffect02 from './../components/ch05.hooks/use_effect_02';
 import AppUseEffect03 from './../components/ch05.hooks/use_effect_03';
 
-//ch05장
+//ch06장
 import AppCafe01 from './../components/ch06.bootstrap/coffee_bread_01/main';
 import AppCafe02 from './../components/ch06.bootstrap/coffee_bread_02/main';
 import AppCafe03 from './../components/ch06.bootstrap/coffee_bread_03/main';
@@ -52,6 +67,17 @@ import AppCafe07 from './../components/ch06.bootstrap/coffee_bread_07/main';
 function AppRoutes() {
     return (
         <Routes>
+
+            {/* 제01장 */}
+            <Route path='/make_array_01' element={<AppMakeArray01 />} />
+            <Route path='/math_object_01' element={<AppMathObject01 />} />
+            <Route path='/if_exercise' element={<AppIfExercise />} />
+            <Route path='/switch_exercise' element={<AppSwitchExercise />} />
+            <Route path='/typeof_number' element={<AppTypeOfNumber />} />
+            <Route path='/form_exam' element={<AppFormExam />} />
+            <Route path='/list_exam' element={<AppListExam />} />
+            <Route path='/table_exam' element={<AppTableExam />} />
+
             <Route path='/' element={<AppLetConst />} />
             <Route path='/let_const' element={<AppLetConst />} />
             <Route path='/template_string' element={<AppTemplateString />} />

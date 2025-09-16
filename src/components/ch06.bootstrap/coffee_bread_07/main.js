@@ -210,8 +210,15 @@ function App() {
 
         // 필터링이 이루어 지면, 정렬 함수를 다시 실행 시켜 화면을 갱신시킵니다.
         ordering(orderInfo) ;
-
     }
+
+    // 필드 검색을 사용하여 필터링을 수행할지 말지를 결정하는 부울 탑입의 변수
+    const isFilteringNeeded = filterCategory && filterCategory !== 'all';
+
+    // 삼항 연산자를 사용하여 필터링 동작을 수행합니다.
+    const filteredProducts = isFilteringNeeded
+     ? products.filter((item) => item.category === filterCategory)
+     : products ;
 
     return (
         <Card>
@@ -221,7 +228,7 @@ function App() {
             <Card.Body>
                 {/* onClickToContent 프롭스가 리턴되고 난 후 ClickArrived 함수가 동작되도록 하겠습니다. */}
                 <Content
-                    contents={products}
+                    contents={filteredProducts}
                     onClickToContent={ClickArrived}
                     categories={categories}
                     onOrderByClick={ClickOrderBy}
